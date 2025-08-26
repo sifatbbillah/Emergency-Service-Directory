@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emergency Service Directory - Assignment-005</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI for quick components -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="logo" class="w-10 h-10 rounded-full border" />
+          <div>
+            <div class="text-sm font-semibold">Emergency Service</div>
+            <div class="text-xs text-gray-500">সহজ সরল সিম্পল</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+            <span id="heartCount" class="text-sm">0</span>
+            <img src="./assets/heart.png" alt="heart">
+          </div>
+          <div class="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+            <span id="coinCount" class="text-sm">100</span>
+            <span>🪙</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm">
+            <span id="copyCount" class="text-sm">0</span>
+            <span>📋</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-gradient-to-r from-green-800 via-green-700 to-green-600 text-white py-10">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <img src="assets/logo.png" alt="govt-logo" class="mx-auto w-20 h-20 bg-white rounded-full p-2 mb-4" />
+      <h1 class="text-3xl md:text-4xl font-bold">Emergency Service Directory</h1>
+      <p class="mt-2 text-sm md:text-base text-green-100">Government Emergency Services at Your Fingertip — A Project by the Government of the People's Republic of Bangladesh</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-4 -mt-6 mb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+      <!-- CARDS (span 3) -->
+      <section class="lg:col-span-3">
+        <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+
+      <!-- HISTORY SIDEBAR -->
+      <aside class="bg-white rounded-lg p-4 shadow h-fit">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold text-lg">📞 Call History</h2>
+          <button id="clearBtn" class="btn btn-sm btn-outline btn-success">Clear</button>
+        </div>
+        <ul id="historyList" class="space-y-3 text-sm text-gray-700"></ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
