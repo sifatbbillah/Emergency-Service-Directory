@@ -26,24 +26,34 @@ function renderCards() {
     const card = document.createElement('article');
     card.className = 'card bg-white p-4 shadow relative';
 
-    card.innerHTML = `
-      <button class="card-like" title="Add Heart" onclick="addHeart(this)">♡</button>
-      <div class="flex items-center gap-3 mb-3">
-        <div class="w-12 h-12 bg-green-50 rounded p-1 flex items-center justify-center">
-          <img src="${s.icon}" alt="${s.name_en}" class="w-full h-full object-contain" />
-        </div>
-        <div>
-          <h3 class="font-semibold">${s.name_en}</h3>
-          <p class="text-xs text-gray-500">${s.category} Service</p>
-        </div>
+   card.innerHTML = `
+  <div class="p-4 rounded-xl shadow-sm border bg-white">
+    <!-- Header: Icon + Heart -->
+    <div class="flex justify-between items-start mb-3">
+      <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+        <img src="${s.icon}" alt="${s.name_en}" class="w-6 h-6 object-contain" />
       </div>
-      <div class="text-2xl font-bold mb-2">${s.number}</div>
-      <div class="mb-3"><span class="badge badge-sm">${s.category}</span></div>
-      <div class="flex gap-2">
-        <button class="btn btn-sm btn-outline flex-1" onclick="copyNumber('${s.number}')">📋 Copy</button>
-        <button class="btn btn-sm btn-success flex-1" onclick="makeCall('${escapeHtml(s.name_en)}','${s.number}')">📞 Call</button>
-      </div>
-    `;
+      <button class="text-gray-400 hover:text-red-500" title="Add Heart" onclick="addHeart(this)">♡</button>
+    </div>
+
+    <!-- Title + Subtitle -->
+    <h3 class="font-semibold text-base">${s.name_en}</h3>
+    <p class="text-sm text-gray-500 mb-3">${s.category}</p>
+
+    <!-- Number -->
+    <div class="text-3xl font-bold mb-2">${s.number}</div>
+    <div class="mb-4">
+      <span class="px-2 py-1 text-xs bg-gray-100 rounded">${s.category}</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex gap-2">
+      <button class="flex-1 border rounded-md py-2 text-sm hover:bg-gray-50" onclick="copyNumber('${s.number}')">Copy</button>
+      <button class="flex-1 bg-green-500 text-white rounded-md py-2 text-sm hover:bg-green-600" onclick="makeCall('${escapeHtml(s.name_en)}','${s.number}')">Call</button>
+    </div>
+  </div>
+`;
+
 
     cardContainer.appendChild(card);
   });
