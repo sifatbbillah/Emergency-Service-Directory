@@ -33,7 +33,7 @@ function renderCards() {
       <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
         <img src="${s.icon}" alt="${s.name_en}" class="w-6 h-6 object-contain" />
       </div>
-      <button class="text-gray-400 hover:text-red-500" title="Add Heart" onclick="addHeart(this)">♡</button>
+      <button class="text-gray-400 hover:text-red-500" title="Add Heart" onclick="addHeart(this)">💗</button>
     </div>
 
     <!-- Title + Subtitle -->
