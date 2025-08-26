@@ -1,5 +1,3 @@
-/* style.css - small additions on top of Tailwind/DaisyUI */
-
 #cardContainer .card {
   position: relative;
   border-radius: 12px;
@@ -12,21 +10,22 @@
   right: 12px;
   cursor: pointer;
   font-size: 18px;
-  color: #cbd5e1; /* gray-300 */
+  color: #cbd5e1;
   transition: transform .12s ease, color .12s ease;
   background: transparent;
   border: none;
   padding: 6px;
   border-radius: 50%;
 }
-.card-like:hover { transform: scale(1.08); color: #ef4444; } /* red-500 */
-
+.card-like:hover {
+  transform: scale(1.08);
+  color: #ef4444;
+}
 .card-like.liked {
-  color: #ef4444; /* red-500 */
+  color: #ef4444;
   transform: scale(1.04);
 }
 
-/* history items */
 .history-item {
   display: flex;
   justify-content: space-between;
@@ -34,12 +33,19 @@
   gap: 8px;
   padding: 8px;
   border-radius: 8px;
-  background: #f8fafc; /* gray-50 */
+  background: #f8fafc;
 }
-.history-item .meta { font-size: 12px; color: #475569; } /* slate-600 */
-.history-item .time { font-size: 11px; color: #94a3b8; } /* slate-400 */
+.history-item .meta {
+  font-size: 12px;
+  color: #475569;
+}
+.history-item .time {
+  font-size: 11px;
+  color: #94a3b8;
+}
 
-/* small responsive tweak */
 @media (max-width: 1024px) {
-  header h1 { font-size: 1.6rem; }
+  header h1 {
+    font-size: 1.6rem;
+  }
 }
