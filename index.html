@@ -17,35 +17,45 @@
 
   <!-- NAVBAR -->
   <nav class="bg-white shadow sticky top-0 z-30">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center gap-3">
-          <img src="assets/logo.png" alt="logo" class="w-10 h-10 rounded-full border" />
-          <div>
-            <div class="text-sm font-extrabold  text-[#006747]">Emergency <br>Service</div>
-            
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Logo + Text -->
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="logo" class="w-10 h-10 rounded-full border" />
+        <!-- Hide on small devices -->
+        <div class="hidden sm:block">
+          <div class="text-sm font-extrabold text-[#006747]">
+            Emergency <br> Service
           </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="flex items-center gap-2 bg-[#41FF6B] px-3 py-1 rounded-full shadow-sm">
-            <span id="heartCount" class="text-sm">0</span>
-            <img src="assets/heart.png" alt="heart" class="w-4 h-4"/>
-          </div>
-          <div class="flex items-center gap-2 bg-[#41FF6B] px-3 py-1 rounded-full shadow-sm">
-            <span id="coinCount" class="text-sm">100</span>
-            <img src="assets/coin.png" alt="heart" class="w-4 h-4"/>
-          </div>
-         <div class="flex items-center gap-2 bg-green-500 px-4 py-1 rounded-full shadow-sm text-white font-medium">
-  <span id="copyCount" class="text-sm">2</span>
-  <div class="flex items-center gap-2 bg-green-500 px-1 py-1 rounded-full shadow-sm text-white font-medium">
-  <span id="copyCount" class="text-sm"></span>
-  <span>Copy</span>
-</div>
-</div>
         </div>
       </div>
+
+      <!-- Right Side Items -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Heart -->
+        <div class="flex items-center gap-2 bg-[#41FF6B] px-3 py-1 rounded-full shadow-sm">
+          <span id="heartCount" class="text-sm">0</span>
+          <img src="assets/heart.png" alt="heart" class="w-4 h-4"/>
+        </div>
+
+        <!-- Coin -->
+        <div class="flex items-center gap-2 bg-[#41FF6B] px-3 py-1 rounded-full shadow-sm">
+          <span id="coinCount" class="text-sm">100</span>
+          <img src="assets/coin.png" alt="coin" class="w-4 h-4"/>
+        </div>
+
+        <!-- Copy Button -->
+        <div class="flex items-center gap-2 bg-green-500 px-4 py-1 rounded-full shadow-sm text-white font-medium">
+          <span id="copyCount" class="text-sm">2</span>
+          <span>Copy</span>
+        </div>
+
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO SECTION -->
   <header class="bg-gradient-to-r from-green-800 via-green-600 to-green-800 text-white py-10 mb-20 ">
